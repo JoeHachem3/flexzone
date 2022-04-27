@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body{
+    background-image: url(../img/gray_paper.png);
+    margin: 0;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif !important;
+    display: grid;
+    overflow-x: hidden !important;
+}
+
+.container{
+    justify-self: center !important;
+    display: grid;
+    margin: 1em;
+    padding: 1em;
+    margin-top: 3em;
+    width: 80vw;
+    box-shadow: 0 0 10px gray;
+}
+
+input{
+    font-family: 'Poppins', sans-serif !important;
+    background-color: transparent !important;
+}
+
+select{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.5em;
+}
+
+button{
+    height: min-content;
+    padding: 0.5em;
+    color: black;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    border: 0;
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 0.5em;
+}
+
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+  
+::-webkit-scrollbar-thumb {
+    background:rgb(69, 58, 223);
+}

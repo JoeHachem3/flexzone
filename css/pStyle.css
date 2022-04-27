@@ -1,0 +1,1421 @@
+body{
+    display: grid;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+
+
+.login{
+    justify-self: end;
+}
+
+input{
+    border-radius: 0.5em;
+    border: 0;
+    border-bottom: 2px solid rgb(69, 58, 223);
+}
+
+select{
+    border-bottom: 2px solid rgb(69, 58, 223) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#changePassword{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 0 0 10px gray;
+    display: grid;
+    grid-gap: 1em;
+    width: 60vw;
+    padding: 1em;
+    z-index: 100;
+}
+
+#changePassword p{
+    color: #efefef;
+    text-align: center;
+    justify-self: center;
+    width: 50%;
+}
+
+#changePassword button{
+    border-radius: 0.5em;
+    
+}
+
+
+.container{
+    margin-top: 150px;
+}
+
+
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    padding: 1em;
+    box-shadow: 0 0 10px gray;
+    background-image: url(../img/background.png);
+    z-index: 99;
+}
+
+.flexzone{
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    justify-self: start;
+    margin: 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(69, 58, 223);
+}
+
+#showNav{
+    display: grid;
+    grid-gap: 0.5em;
+    background-color: transparent;
+    justify-self: end;
+}
+
+#showNav:hover{
+    box-shadow: 0 0 0 !important;
+}
+
+#showNav span{
+    width: 2em;
+    height: 2px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 0.5em;
+}
+
+
+
+
+
+
+#navDiv{
+    position: fixed;
+    right: 0;
+    box-shadow: 0 0 20px gray;
+    border-radius: 0;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    width: 0;
+    height: 100%;
+    background-image: url(../img/gray_paper.png) !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 100;
+    display: grid;
+}
+
+nav{
+    display: grid;
+    grid-gap: 3em;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#hideNav{
+    justify-self: start;
+    border: 0;
+    background-color: transparent;
+    padding: 1em;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#hideNav:hover{
+    border: 0 !important;
+    box-shadow: 0 0 0 !important;
+}
+
+nav img{
+    height: 50px;
+    width: auto;
+    justify-self: center;
+}
+
+nav button{
+    background-color: transparent;
+    box-shadow: 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav button:hover{
+    box-shadow: 0 0 0 !important;
+    border-bottom: 2px solid rgb(69, 58, 223);
+}
+
+nav .logout{
+    background-color: rgb(69, 58, 223);
+    justify-self: center;
+    font-size: 0.6em;
+    border-radius: 0.5em;
+}
+
+nav button.clicked{
+    border-bottom: 2px solid rgb(69, 58, 223);
+}
+
+
+
+#profile,
+#fz-games, 
+#community{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+
+#fz-games, 
+#community{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+
+
+.profileImageDiv{
+    margin-top: -3em;
+    display: grid;
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    border-radius: 50%;
+    background-image: url(../img/default.png);
+    margin-bottom: 1em;
+}
+
+.profileImageDiv img{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: center;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+.profileImageDiv form{
+    visibility: hidden;
+}
+
+
+
+button{
+    height: min-content;
+    padding: 0.5em;
+    color: black;
+    font-size: 0.8em;
+    background-color: rgb(69, 58, 223);
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 2px  rgb(69, 58, 223),
+                0 0 5px  rgb(69, 58, 223),
+                0 0 10px  rgb(69, 58, 223);
+}
+
+
+
+.profileChooseImage{
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: end;
+}
+
+
+
+.profileUsernameAndTrophiesDiv{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1em;
+    margin-bottom: 1em;
+}
+
+.profileTrophiesDiv{
+    border-radius: 1em;
+    font-size: 3rem;
+    border: 2px solid rgb(69, 58, 223);
+    justify-self: start;
+    min-width: 150px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trophiesContainer{
+    display: grid;
+    grid-gap: 0.3rem;
+    grid-template-columns: repeat(8, 1fr);
+    position: relative;
+    top: -2.5rem;
+    padding: 0.5rem;
+}
+
+.profileTrophiesDiv span{
+    color: rgb(69, 58, 223);
+    padding: 0;
+    margin: 0;
+    height: 1rem;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+}
+
+
+
+.profileNameAndAgeDiv{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 2px solid rgb(69, 58, 223);
+}
+
+.profileNameAndAgeDiv i{
+    justify-self: end;
+    padding-right: 1em;
+    color: rgb(69, 58, 223);
+    font-size: 1.5em;
+}
+
+
+
+.profileGenderDiv,
+.profileClassDiv,
+.profileFavEquipDiv{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    border-bottom: 2px solid  rgb(69, 58, 223);
+}
+
+
+.profileClassDiv label{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.profileClassDiv span{
+    grid-row: 1;
+    grid-column: 2/3;
+}
+
+.profileClassDiv button{
+    position: relative;
+    grid-row: 1;
+    grid-column: 2/5;
+    justify-self: stretch;
+    display: grid;
+    justify-content: end;
+    padding-right: 1em;
+    border: 0;
+    box-shadow: 0 0 5px gray;
+    border-radius: 0.5em;
+    background-color: transparent !important;
+    margin-left: -1em;
+}
+
+.profileClassDiv #downSchedule{
+    z-index: 2;
+    visibility: visible;
+    transition: z-index 0.5s;
+}
+
+.profileClassDiv #upSchedule{
+    z-index: 1;
+    visibility: hidden;
+    transition: z-index 0.5s;
+}
+
+.profileClassDiv button:hover{
+box-shadow: 0 0 2px gray !important;
+}
+
+.profileClassDiv i{
+    color: rgb(69, 58, 223);
+}
+
+.profileClassDiv button:hover i{
+    text-shadow: 0 0 2px rgb(69, 58, 223);
+}
+
+
+
+
+
+
+
+
+.profileScheduleDiv{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    height: 10em;
+    margin-top: -10em;
+}
+
+.profileScheduleDiv .day{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    border-bottom: 1px solid gray;
+}
+
+.profileScheduleDiv .day label{
+    font-weight: bold;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.profileScheduleDiv .day .start{
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.profileScheduleDiv .day .end{
+    grid-column: 3;
+    align-self: center;
+    justify-self: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+
+
+
+
+
+
+.profileLevelDiv{
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 2px solid  rgb(69, 58, 223);
+}
+
+.profileLevelDiv label{
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.profileLevelDiv .progressBar{
+    border: 1px solid rgb(69, 58, 223);
+    border-radius: 1em;
+    grid-column: 2/4;
+    grid-row: 1;
+    height: 0.3em;
+    margin: 1em;
+}
+
+.profileLevelDiv .progressBar .progress{
+    border-radius: 1em;
+    background-color: rgb(69, 58, 223);
+    box-shadow: 0 0 2px  rgb(69, 58, 223),
+                0 0 5px  rgb(69, 58, 223),
+                0 0 10px  rgb(69, 58, 223);
+    height: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.profileLevelDiv button{
+    position: relative;
+    grid-row: 1;
+    grid-column: 2/5;
+    justify-self: stretch;
+    display: grid;
+    justify-content: end;
+    padding-right: 1em;
+    border: 0;
+    box-shadow: 0 0 5px gray;
+    border-radius: 0.5em;
+    background-color: transparent !important;
+}
+
+.profileLevelDiv #downSkills{
+    z-index: 2;
+    visibility: visible;
+    transition: z-index 0.5s;
+}
+
+.profileLevelDiv #upSkills{
+    z-index: 1;
+    visibility: hidden;
+    transition: z-index 0.5s;
+}
+
+.profileLevelDiv button:hover{
+box-shadow: 0 0 2px gray !important;
+}
+
+.profileLevelDiv i{
+    color: rgb(69, 58, 223);
+}
+
+.profileLevelDiv button:hover i{
+    text-shadow: 0 0 2px rgb(69, 58, 223);
+}
+
+
+
+
+
+
+
+
+.profileSkillsDiv{
+    width: 90%;
+    justify-self: center;
+    margin-top: -1em;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -10em;
+    height: 10em;
+    overflow-y: auto;
+}
+
+.profileSkillsDiv .notDone{
+    list-style-image: url(../img/uncheck.png);
+    border-bottom: 1px solid gray;
+    padding-bottom: 1em;
+}
+
+.profileSkillsDiv .done{
+    list-style-image: url(../img/check.png);
+}
+
+.profileSkillsDiv .done li{
+    display: grid;
+    padding-bottom: 1em;
+}
+
+
+
+
+
+
+
+.profileFavEquipDiv label{
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.profileFavEquipDiv span{
+    grid-row: 1;
+    grid-column: 2/3;
+}
+
+.profileFavEquipDiv button{
+    position: relative;
+    grid-row: 1;
+    grid-column: 2/3;
+    justify-self: stretch;
+    display: grid;
+    justify-content: end;
+    padding-right: 1em;
+    border: 0;
+    box-shadow: 0 0 5px gray;
+    border-radius: 0.5em;
+    background-color: transparent !important;
+    margin-left: -1em;
+}
+
+.profileFavEquipDiv #downEquip{
+    z-index: 2;
+    visibility: visible;
+    transition: z-index 0.5s;
+}
+
+.profileFavEquipDiv #upEquip{
+    z-index: 1;
+    visibility: hidden;
+    transition: z-index 0.5s;
+}
+
+.profileFavEquipDiv button:hover{
+box-shadow: 0 0 2px gray !important;
+}
+
+.profileFavEquipDiv i{
+    color: rgb(69, 58, 223);
+}
+
+.profileFavEquipDiv button:hover i{
+    text-shadow: 0 0 2px rgb(69, 58, 223);
+}
+
+
+
+
+
+
+
+
+
+.equipmentList{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr;
+    width: 90%;
+    grid-row: 1;
+    grid-column: 1/3;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -10em;
+    height: 10em;
+    overflow-y: auto;
+    justify-self: center;
+}
+
+
+
+
+
+
+
+
+
+.profileEditableDiv form{
+    display: grid;
+    grid-row-gap: 2em;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+
+
+
+
+
+
+
+.profileUpdate{
+    border-radius: 0.5em;
+    grid-row: 11;
+}
+
+
+
+
+
+
+
+
+@keyframes fade{
+    0%{
+       opacity: 1;
+       visibility: visible;
+    }
+    50%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+.profileSuccessDiv{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 10px gray;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    background-image: url(../img/gray_paper.png);
+    height: 5rem;
+    bottom: 0;
+    z-index: 2;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    animation-name: fade;
+    visibility: hidden;
+    opacity: 0;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: 1;
+}
+
+.profileSuccessDiv p{
+    text-align: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.successParagraph{
+    color: rgb(69, 58, 223);
+}
+
+.failParagraph{
+    color: red;
+}
+
+.randomParagraph{
+    color: rgb(80, 80, 80);
+    font-size: 0.8em;
+    align-self: start;
+}
+
+
+
+
+
+
+
+
+
+#fz-games{
+    display: grid;
+}
+
+.upcomingChallenges{
+    margin-top: 50px;
+}
+
+.ongoingChallenges{
+    margin-top: 50px;
+}
+
+
+#fz-games .hotChallenges .countdown{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#fz-games .hotChallenges .countdown div{
+    display: grid;
+    height: 3em;
+    width: 3em;
+    border-radius: 0.5em;
+    border-bottom: 2px solid rgb(69, 58, 223);
+    
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#fz-games .challenges{
+    
+    display: grid;
+}
+
+#fz-games .challenge{
+    display: grid;
+    grid-gap: 1em;
+    border-bottom: 2px solid rgb(69, 58, 223);
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+#fz-games .challenge{
+    grid-template-columns: 1fr;
+}
+
+#fz-games .challenge label{
+    height: 1.6em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#fz-games .challenge button{
+    border-radius: 0.5em;
+}
+
+
+#fz-games .add{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/gray_paper.png);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+#fz-games .add:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#fz-games .add span{
+    grid-row: 1;
+    grid-column: 1;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    background-color: rgb(69, 58, 223);
+    justify-self: center;
+    align-self: center;
+}
+
+#fz-games .add span.ver{
+    transform: rotateZ(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#community{
+    display: grid;
+}
+
+.communityDiv{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.communityDiv .communityClass{
+    border-bottom: 2px solid rgb(69, 58, 223);
+    width: 80vw;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.communityDiv .communityCoaches,
+.communityDiv .communityGymnasts{
+    display: grid;
+    grid-gap: 1em;
+}
+
+
+
+
+.communityDiv .card{
+    box-shadow: 0 0 10px gray;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.3em;
+    padding: 0.5em;
+    height: 80px;
+    transition: 0.3s ease-in-out;
+    width: 80%;
+    justify-self: center;
+}
+
+.communityDiv .card .imgBx{
+    grid-row: 1/3;
+    grid-column: 1;
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/miniDefault.png);
+    background-size: 80px;
+    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.communityDiv .card .imgBx img{
+    width: 80px;
+    height: auto;
+}
+
+.communityDiv .card form{
+    display: grid;
+    position: relative;
+    background-color: transparent;
+    justify-self: end;
+    align-self: start;
+    grid-column: 2;
+    grid-row: 1;
+    cursor: pointer;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.communityDiv .card button{
+    display: grid;
+    background-color: transparent;
+    grid-gap: 1px;
+}
+
+.communityDiv .card button span{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);
+}
+
+.communityDiv .card button:hover{
+    box-shadow: 0 0 0 !important;
+}
+
+.communityDiv .card:hover form{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.communityDiv .card form:hover span{
+    background-color: black;
+}
+
+.communityDiv .card .main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.3em;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.communityDiv .card .username{
+    align-self: center;
+    justify-self: start;
+}
+
+.communityDiv .card .main .trophies{
+    color: rgb(69, 58, 223);
+    font-size: 2em;
+    margin-top: -0.5em;
+}
+
+.communityDiv .card .name{
+    font-size: 0.8em;
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+.communityDiv .card .class{
+    font-size: 0.8em;
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+.communityDiv .card .content{
+    grid-column: 2;
+    font-size: 0.8em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column: 1/3;
+    visibility: hidden;
+    opacity: 0;
+    grid-gap: 0.3rem;
+}
+
+
+
+.communityDiv .card .content .quote{
+    grid-column: 1/3;
+    justify-self: center;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid blue;
+}
+
+.communityDiv .card .content .socials{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+.communityDiv .card .content .socials a{
+    text-decoration: none;
+    color: black;
+    display: grid;
+}
+
+.communityDiv .card:hover{
+    height: 150px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.communityDiv .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+
+
+#community .add{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/gray_paper.png);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+#community .add:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#community .add span{
+    grid-row: 1;
+    grid-column: 1;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    background-color: rgb(69, 58, 223);
+    justify-self: center;
+    align-self: center;
+}
+
+#community .add span.ver{
+    transform: rotateZ(90deg);
+}
+
+#community .buttonList{
+    display: grid;
+    position: relative;
+    grid-gap: 1em;
+    width: 100px;
+    background-image: url(../img/gray_paper.png);
+    margin-top: -340px;
+    top: -45px;
+    justify-self: end;
+    z-index: 25;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    transition: height 0.5s;
+}
+
+#community .buttonList button{
+    border-radius: 0.5em;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.addDiv{
+    display: grid;
+    grid-gap: 1em;
+    position: fixed;
+    background-image: url(../img/gray_paper.png);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    top: 200%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    transition: 0.5s;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 30;
+}
+
+.addForm{
+    display: grid;
+    grid-gap: 1em;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.addForm .birthdate{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+
+.addForm .birthdate label{
+    justify-self: start;    
+}
+
+.addForm .birthdate input{
+    justify-self: stretch;    
+}
+
+.addDiv .addButtonDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.addDiv button{
+    border-radius: 0.5em;
+}
+
+#addSkillForm,
+#addTaskForm,
+#addReviewForm{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#addTaskForm span{
+    grid-column: 1/5;
+}
+
+#addSkillForm .input,
+#addTaskForm .input,
+#addReviewForm .input{
+    grid-column: 1/5;
+}
+
+#addReviewForm span{
+    grid-column: 1/5;
+}
+
+
+
+
+
+
+
+.editDiv{
+    grid-gap: 1em;
+}
+
+
+
+
+
+
+.editCoachForm,
+.editGymnastForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+#editGymnastForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.editCoachForm button{
+    grid-column: 1/3;
+}
+
+.editGymnastForm button{
+    grid-column: 1/3;
+}
+
+.editGymnast button,
+.editCoach button{
+    border-radius: 0.5em;
+}
+
+.editCoach .addTask{
+    border-radius: 0.5em;
+}
+
+
+
+
+
+
+
+
+@media(min-width: 840px){
+
+    #changePassword{
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-position-x: center;
+        box-shadow: 0 0 10px gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        width: 60vw;
+        padding: 1em;
+        z-index: 100;
+    }
+    
+    #changePassword p{
+        color: #efefef;
+        grid-column: 1/3;
+        text-align: center;
+        justify-self: center;
+        width: 50%;
+    }
+    
+    #changePassword button{
+        border-radius: 0.5em;
+        grid-column: 1/3;
+    }
+
+    .top{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #hideNav{
+        visibility: hidden;
+        opacity: 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #navDiv{
+        position: fixed;
+        top: 0;
+        box-shadow: 0 0 20px gray;
+        border-radius: 0;
+        width: 100vw !important;
+        height: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../img/gray_paper.png) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transition: 0.3s;
+        z-index: 100;
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+        grid-gap: 1em;
+        padding: 1em;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    nav img{
+        height: 50px;
+        width: auto;
+    }
+    
+    nav button{
+        background-color: transparent;
+        box-shadow: 0;
+        border-bottom: 2px solid transparent;
+    }
+    
+    nav button:hover{
+        box-shadow: 0 0 0 !important;
+        border-bottom: 2px solid rgb(69, 58, 223);
+    }
+    
+    nav .logout{
+        background-color: rgb(69, 58, 223);
+        justify-self: center;
+        font-size: 0.6em;
+        border-radius: 0.5em;
+    }
+
+    
+
+
+
+
+
+    #fz-games .hotChallenges{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #fz-games .hotChallenges .countdown{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #fz-games .hotChallenges .countdown div{
+        display: grid;
+        height: 3em;
+        width: 3em;
+        border-radius: 0.5em;
+        border-bottom: 2px solid rgb(69, 58, 223);
+        
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #fz-games .challenges{
+        grid-column: 1/3;
+        display: grid;
+    }
+
+    #fz-games .challenge{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+        grid-gap: 0.3em;
+        border-bottom: 2px solid rgb(69, 58, 223);
+        padding-bottom: 2em;
+        padding-top: 2em;
+    }
+
+    #fz-games .coach{
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr 2fr;
+    }
+
+    #fz-games .challenge label{
+        height: 1.6em;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #fz-games .challenge input{
+        width: 90%;
+    }
+
+    #fz-games .challenge button{
+        border-radius: 0.5em;
+    }
+
+    #fz-games .challenge .dateChallenge{
+        width: 100%;
+    }
+
+
+
+    
+
+
+    .communityDiv .communityCoaches,
+    .communityDiv .communityGymnasts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+
+
+
+
+
+
+
+    #community .addGymnastDiv{
+        display: grid;
+        grid-template-columns: 1fr;
+        position: fixed;
+        background-image: url(../img/gray_paper.png);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+    }
+    
+    #community .addGymnastForm{
+        grid-row: 1;
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    #community .addGymnastForm .birthdate{
+        display: grid;
+        grid-template-columns: 1fr 1fr;    
+    }
+    
+    #community .addGymnastForm .birthdate label{
+        justify-self: start;    
+    }
+    
+    #community .addGymnastForm .birthdate input{
+        justify-self: end;    
+    }
+    
+    #community .addGymnastDiv .addGymnastButtonDiv{
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+    
+    #community .addGymnastDiv button{
+        align-self: end;
+        border-radius: 0.5em;
+    }
+    
+    #community .addGymnastDiv .addGymnastButton{
+        grid-column: 3;
+    }
+    
+    #community .addGymnastDiv .cancel{
+        grid-column: 2;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

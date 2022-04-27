@@ -1,0 +1,76 @@
+.container{
+    align-self: center;
+    background-image: url("../img/background.jpg") !important;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.loginBack{
+    text-decoration: none;
+    color: rgb(69, 58, 223);
+    padding: 1em;
+}
+
+.loginDiv{
+    display: grid;
+    grid-gap: 1em;
+}
+
+.loginLogo{
+    width: 60%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.loginForm{
+    display: grid;
+    grid-gap: 1em;
+}
+
+.loginForm input{
+    border-radius: 0.5em;
+    border: 0;
+    border-bottom: 2px solid rgb(69, 58, 223);
+    background-color: transparent;
+    padding: 0.5em;
+    color: #efefef;
+}
+
+.error{
+    border-bottom: 2px solid rgb(255, 1, 19) !important;
+}
+
+button{
+    height: min-content;
+    padding: 0.5em;
+    color: black;
+    font-size: 0.8em;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px gray;
+    cursor: pointer;
+    background: #efefef !important;
+}
+
+button:hover{
+    box-shadow: 0 0 5px gray;
+    color:rgb(69, 58, 223);
+    transition: box-shadow 0s, color 0.5s;
+}
+
+.loginError{
+    color:rgb(255, 1, 19);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color: rgb(69, 58, 223);
+}
+

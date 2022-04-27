@@ -1,0 +1,108 @@
+.container{
+    background-image: url("../img/background.jpg") !important;
+    background-size: cover;
+    background-position-x: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+.mainLogo{
+    width: 60%; 
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    padding: 1em;
+}
+
+.mainParagraph{
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    color: #EFEFEF;
+}
+
+.mainButtonDiv{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.mainButtonDiv button{
+    text-transform: uppercase;
+    display: grid;
+    padding: 1em;
+    box-shadow: 0 0 10px gray;
+    border-radius: 1em;
+    align-items: center;
+    justify-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.mainSocials{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    align-self: stretch;
+    justify-self: stretch;
+    padding-top: 1em;
+}
+
+.mainSocials a{
+    display: grid;
+    padding: 1.5em;
+    border-radius: 1em;
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    box-shadow: 0 0 10px gray;
+    align-self: center;
+    justify-self: center;
+    background: #EFEFEF;
+}
+
+button:hover{
+    box-shadow: 0 0 5px gray;
+    color: rgb(69, 58, 223);
+    transition: box-shadow 0s, color 0.5s;
+}
+
+a:hover{
+    box-shadow: 0 0 5px gray;
+    transition: box-shadow 0s, color 0.5s;
+}
+
+.mainSocials .fab{
+    justify-self: center;
+    align-self: center;
+    color: black;
+}
+
+a:hover .fab{
+    transition: 0.5s;
+}
+
+a:hover .fa-instagram{
+    color: rgb(221, 42, 123);
+}
+
+a:hover .fa-facebook{
+    color: rgb(66, 103, 178);
+}
+
+a:hover .fa-youtube{
+    color: red;
+}
+
+@media(min-width: 840px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5em;
+    }
+
+    .mainLogo{
+        width: 100%;
+        height: auto;
+    }
+}
